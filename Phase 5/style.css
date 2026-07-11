@@ -1,0 +1,94 @@
+/* ==========================
+   Student Management System
+   ========================== */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f9;
+    margin: 30px;
+}
+
+/* Heading */
+
+h2 {
+    text-align: center;
+    color: #2c3e50;
+}
+
+/* Link */
+
+a {
+    text-decoration: none;
+    color: blue;
+    font-weight: bold;
+}
+
+a:hover {
+    color: red;
+}
+
+/* Form */
+
+form {
+    margin-bottom: 20px;
+}
+
+/* Input Box */
+
+input[type=text],
+input[type=email] {
+    width: 300px;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+/* Buttons */
+
+input[type=submit] {
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #2980b9;
+}
+
+/* Table */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+/* Table Header */
+
+th {
+    background-color: #3498db;
+    color: white;
+    padding: 12px;
+}
+
+/* Table Data */
+
+td {
+    padding: 10px;
+}
+
+/* Border */
+
+table,
+th,
+td {
+    border: 1px solid #ddd;
+}
+
+/* Hover Effect */
+
+tr:hover {
+    background-color: #f1f1f1;
+}
