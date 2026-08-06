@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Category List</title>
+    <title>Product List</title>
 
     <style>
         body{
@@ -11,7 +11,7 @@
 
         table{
             width:100%;
-            border-collapse:collapse;
+            border-collapse: collapse;
             margin-top:20px;
         }
 
@@ -36,13 +36,14 @@
         .success{
             color:green;
             font-weight:bold;
+            margin-top:15px;
         }
     </style>
 
 </head>
 <body>
 
-<h2>Category List</h2>
+<h2>Product List</h2>
 
 @if(session('success'))
     <p class="success">
@@ -52,34 +53,46 @@
 
 <br>
 
-<a href="{{ route('categories.create') }}">Add Category</a>
+<a href="{{ route('products.create') }}">Add Product</a>
 
 <table>
 
     <tr>
         <th>ID</th>
-        <th>Name</th>
+        <th>Category</th>
+        <th>Product Name</th>
+        <th>Price</th>
         <th>Description</th>
         <th>Action</th>
     </tr>
 
-    @forelse($categories as $category)
+    @forelse($products as $product)
 
     <tr>
-        <td>{{ $category->id }}</td>
-        <td>{{ $category->name }}</td>
-        <td>{{ $category->description }}</td>
+
+        <td>{{ $product->id }}</td>
+
+        <td>{{ $product->category->name ?? 'No Category' }}</td>
+
+        <td>{{ $product->name }}</td>
+
+        <td>{{ $product->price }}</td>
+
+        <td>{{ $product->description }}</td>
 
         <td>
-            <a href="{{ route('categories.edit', $category->id) }}">Edit</a>
+            <a href="{{ route('products.edit', $product->id) }}">
+                Edit
+            </a>
         </td>
+
     </tr>
 
     @empty
 
     <tr>
-        <td colspan="4" style="text-align:center;">
-            No Categories Found
+        <td colspan="6" style="text-align:center;">
+            No Products Found
         </td>
     </tr>
 
